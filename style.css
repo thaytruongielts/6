@@ -1,0 +1,134 @@
+:root {
+    --primary-color: #5d45e4;
+    --accent-color: #f7a31b;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #1f2937, #111827);
+    color: #d1d5db;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container {
+    font-family: 'Merriweather', serif;
+    animation: fadeIn 2s ease-out;
+    max-width: 900px;
+    width: 100%;
+    background-color: #1f2937;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.header-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #d1d5db;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: #2a3442;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #f3f4f6;
+    margin-bottom: 1rem;
+}
+
+.controls {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+button, .download-btn {
+    padding: 0.75rem 1.25rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.record-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.record-btn:hover:enabled {
+    background-color: #4a38b1;
+    transform: scale(1.05);
+}
+
+.stop-btn {
+    background-color: #dc2626;
+    color: white;
+    border: none;
+}
+
+.stop-btn:hover:enabled {
+    background-color: #b91c1c;
+    transform: scale(1.05);
+}
+
+.download-btn {
+    background-color: #22c55e;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: none;
+    border: none;
+}
+
+.download-btn:hover:enabled {
+    background-color: #16a34a;
+    transform: scale(1.05);
+}
+
+button:disabled, .download-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.audio-player {
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #374151;
+    border-radius: 9999px;
+}
+
+.hidden {
+    display: none;
+}
+
+.status-message {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    margin-left: 1rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
